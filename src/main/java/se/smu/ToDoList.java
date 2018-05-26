@@ -1,7 +1,4 @@
 import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,17 +10,12 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
-import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableCellRenderer;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.JLabel;
-import javax.swing.table.DefaultTableCellRenderer;
 
 public class ToDoList extends JFrame {
 	private JPanel contentPane;
-	private JButton completeAskBtn;
-	private JButton cancelAskBtn;
 	String inputStr[] = new String[5];
 	
 	public static void main(String[] args) {
@@ -42,7 +34,10 @@ public class ToDoList extends JFrame {
 	public ToDoList() {
 		setTitle("To Do List");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 501, 489);
+		setBounds(100, 100, 500, 800);
+		
+		JPanel mainPanel = new JPanel();
+		mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
 		
 		//테이블 구성
 		String header[]= {"완료여부","할일","마감기한","실제마감","중요도"};
@@ -74,6 +69,9 @@ public class ToDoList extends JFrame {
 		panel.add(importance);
 		
 		//버튼 구성
+		JPanel btnPanel = new JPanel();
+		btnPanel.setLayout(new BoxLayout(btnPanel, BoxLayout.X_AXIS));
+		
 		JButton enrollBtn = new JButton("등록");
 		enrollBtn.addActionListener(new ActionListener() {
 			@Override
@@ -93,8 +91,8 @@ public class ToDoList extends JFrame {
 				}
 			});
 		
-		JButton cancelBtn = new JButton("삭제");
-		cancelBtn.addActionListener(new ActionListener() {
+		JButton removeBtn = new JButton("삭제");
+		removeBtn.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if(table.getSelectedRow()==-1)
@@ -116,43 +114,54 @@ public class ToDoList extends JFrame {
 		});
 
 		JButton hideBtn = new JButton("숨기기");
-		
 		hideBtn.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {		
 				int row = table.getRowCount();
-				int column = table.getColumnCount();
 
 				if(hideBtn.getText().equals("숨기기")) {
 					hideBtn.setText("보이기");
 					
-					for(int j=0;j<column;j++) {
 						for(int i=0;i<row;i++) {
 							if(table.getValueAt(i,0)=="V")
 								table.setRowHeight(i,1);
 							}
 						}
-					}
 				
 				else if(hideBtn.getText().equals("보이기")) {
 					hideBtn.setText("숨기기");
 					
-					for(int j=0;j<column;j++) {
 						for(int i=0;i<row;i++) {
 							if(table.getValueAt(i,0)=="V")
 								table.setRowHeight(i,15);
 							}
 						}
-					}
 				}
 			});
 
-		panel.add(enrollBtn);
-		panel.add(cancelBtn);
-		panel.add(completeBtn);
-		panel.add(hideBtn);
+		JButton comDelBtn = new JButton("완료삭제");
+		comDelBtn.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				int row = table.getRowCount();
+
+						for(int i=0;i<row;i++) {
+							if(table.getValueAt(i,0)=="V")
+								model.removeRow(i);
+							}
+						}
+			});
+		
+		btnPanel.add(enrollBtn);
+		btnPanel.add(removeBtn);
+		btnPanel.add(completeBtn);
+		btnPanel.add(hideBtn);
+		btnPanel.add(comDelBtn);
+		
+		mainPanel.add(btnPanel);
+		mainPanel.add(panel);
 		
 		getContentPane().add(scrollpane, BorderLayout.CENTER);
-		getContentPane().add(panel, BorderLayout.SOUTH);
+		getContentPane().add(mainPanel, BorderLayout.SOUTH);
 	}
 }
