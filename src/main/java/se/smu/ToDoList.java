@@ -1,4 +1,6 @@
 import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
@@ -13,8 +15,10 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableCellRenderer;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.JLabel;
+import javax.swing.table.DefaultTableCellRenderer;
 
 public class ToDoList extends JFrame {
 	private JPanel contentPane;
@@ -110,29 +114,43 @@ public class ToDoList extends JFrame {
 					table.setValueAt("V", table.getSelectedRow(), 0);
 			}
 		});
-		/* 숨기기 버튼 미구현
+
 		JButton hideBtn = new JButton("숨기기");
+		
 		hideBtn.addActionListener(new ActionListener() {
 			@Override
-			public void actionPerformed(ActionEvent e) {
-				
+			public void actionPerformed(ActionEvent e) {		
 				int row = table.getRowCount();
-				
-				for(int i=0;i<row;i++) {
-						if(table.getValueAt(i,0)=="V") {
+				int column = table.getColumnCount();
 
-							;
+				if(hideBtn.getText().equals("숨기기")) {
+					hideBtn.setText("보이기");
+					
+					for(int j=0;j<column;j++) {
+						for(int i=0;i<row;i++) {
+							if(table.getValueAt(i,0)=="V")
+								table.setRowHeight(i,1);
 							}
-						else
-							return;
 						}
+					}
+				
+				else if(hideBtn.getText().equals("보이기")) {
+					hideBtn.setText("숨기기");
+					
+					for(int j=0;j<column;j++) {
+						for(int i=0;i<row;i++) {
+							if(table.getValueAt(i,0)=="V")
+								table.setRowHeight(i,15);
+							}
+						}
+					}
 				}
 			});
-		*/
+
 		panel.add(enrollBtn);
 		panel.add(cancelBtn);
 		panel.add(completeBtn);
-		//panel.add(hideBtn);
+		panel.add(hideBtn);
 		
 		getContentPane().add(scrollpane, BorderLayout.CENTER);
 		getContentPane().add(panel, BorderLayout.SOUTH);
