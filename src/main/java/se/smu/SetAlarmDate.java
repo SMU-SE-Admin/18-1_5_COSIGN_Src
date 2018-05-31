@@ -9,11 +9,11 @@ import cosign.*;
 
 import javax.swing.border.*;
 
-public class setAlarmDate extends JFrame {
+public class SetAlarmDate extends JFrame {
 
 	private JPanel contentPane;
 
-	public setAlarmDate() {
+	public SetAlarmDate() {
 		setBounds(100, 100, 426, 165);
 		
 		JPanel contentPane = new JPanel();
@@ -33,7 +33,7 @@ public class setAlarmDate extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					setAlarmDate fr = new setAlarmDate();
+					SetAlarmDate fr = new SetAlarmDate();
 					fr.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
