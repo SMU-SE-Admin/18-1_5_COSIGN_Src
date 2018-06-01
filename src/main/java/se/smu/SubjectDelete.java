@@ -52,58 +52,58 @@ public class SubjectDelete extends JFrame {
 		//label
 		JLabel label = new JLabel("\uACFC\uBAA9 \uBA85");
 		label.setBounds(40, 35, 110, 30);
-		label.setFont(new Font("맑은 고딕", Font.BOLD, 23));
+		label.setFont(new Font("留묒� 怨좊뵓", Font.BOLD, 23));
 		label.setForeground(Color.GRAY);
 		label.setToolTipText(" ");
 
 		JLabel label_1 = new JLabel("\uB2F4\uB2F9 \uAD50\uC218");
 		label_1.setBounds(40, 130, 110, 30);
-		label_1.setFont(new Font("맑은 고딕", Font.BOLD, 23));
+		label_1.setFont(new Font("留묒� 怨좊뵓", Font.BOLD, 23));
 		label_1.setForeground(Color.GRAY);
 
 		JLabel label_2 = new JLabel("\uC694\uC77C/\uC2DC\uAC04");
 		label_2.setBounds(40, 225, 110, 30);
-		label_2.setFont(new Font("맑은 고딕", Font.BOLD, 23));
+		label_2.setFont(new Font("留묒� 怨좊뵓", Font.BOLD, 23));
 		label_2.setForeground(Color.GRAY);
 
 		JLabel label_3 = new JLabel("\uB144\uB3C4/\uD559\uAE30");
 		label_3.setBounds(40, 320, 110, 30);
-		label_3.setFont(new Font("맑은 고딕", Font.BOLD, 23));
+		label_3.setFont(new Font("留묒� 怨좊뵓", Font.BOLD, 23));
 		label_3.setForeground(Color.GRAY);
 
 		JLabel label_4 = new JLabel("\uC138\uBD80 \uC0AC\uD56D");
 		label_4.setBounds(40, 415, 110, 30);
-		label_4.setFont(new Font("맑은 고딕", Font.BOLD, 23));
+		label_4.setFont(new Font("留묒� 怨좊뵓", Font.BOLD, 23));
 		label_4.setForeground(Color.GRAY);
 
 		//textField
 		JTextField textField = new JTextField();
 		textField.setBounds(220, 30, 155, 45);
-		textField.setFont(new Font("HY견고딕", Font.PLAIN, 15));
+		textField.setFont(new Font("HY寃ш퀬�뵓", Font.PLAIN, 15));
 		textField.setColumns(10);
 		textField.setBackground(Color.WHITE);
 
 		textField_1 = new JTextField();
 		textField_1.setBounds(220, 125, 155, 45);
-		textField_1.setFont(new Font("HY견고딕", Font.PLAIN, 15));
+		textField_1.setFont(new Font("HY寃ш퀬�뵓", Font.PLAIN, 15));
 		textField_1.setColumns(10);
 
 		textField_2 = new JTextField();
 		textField_2.setBounds(220, 220, 155, 45);
-		textField_2.setFont(new Font("HY견고딕", Font.PLAIN, 15));
+		textField_2.setFont(new Font("HY寃ш퀬�뵓", Font.PLAIN, 15));
 		textField_2.setColumns(10);
 
 		textField_3 = new JTextField();
 		textField_3.setBounds(220, 320, 155, 45);
-		textField_3.setFont(new Font("HY견고딕", Font.PLAIN, 15));
+		textField_3.setFont(new Font("HY寃ш퀬�뵓", Font.PLAIN, 15));
 		textField_3.setColumns(10);
 
 		textField_4 = new JTextField();
 		textField_4.setBounds(220, 410, 155, 45);
-		textField_4.setFont(new Font("HY견고딕", Font.PLAIN, 15));
+		textField_4.setFont(new Font("HY寃ш퀬�뵓", Font.PLAIN, 15));
 		textField_4.setColumns(10);
 
-		//확인 버튼
+		//�솗�씤 踰꾪듉
 		JButton OKbtn = new JButton("");
 		OKbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -180,8 +180,8 @@ public class SubjectDelete extends JFrame {
 					e_1.printStackTrace();
 				}
 				if (count != 4) {
-					Warning warning = new Warning();
-					warning.setVisible(true);
+					Notify Notify = new Notify();
+					Notify.setVisible(true);
 					count = 0;
 				} else {
 					try {

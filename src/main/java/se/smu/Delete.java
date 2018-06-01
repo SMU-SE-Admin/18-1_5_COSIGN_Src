@@ -30,23 +30,23 @@ public class Delete extends JFrame {
 				}
 			});
 			
-		//삭제 확인
+		//�궘�젣 �솗�씤
 		JPanel contentPane = new JPanel();
 		contentPane.setLayout(null);
 		contentPane.setBackground(new Color(255, 255, 255));
 		setContentPane(contentPane);
 
-		JLabel delIMG = new JLabel("삭제하시겠습니까?");
+		JLabel delIMG = new JLabel("�궘�젣�븯�떆寃좎뒿�땲源�?");
 		delIMG.setBounds(105, 10, 200, 40);
-		delIMG.setFont(new Font("맑은고딕", Font.BOLD, 23));
+		delIMG.setFont(new Font("留묒�怨좊뵓", Font.BOLD, 23));
 		delIMG.setForeground(new Color(128, 128, 128));
 
-		JButton delBtn = new JButton("확인");
+		JButton delBtn = new JButton("�솗�씤");
 		delBtn.setBounds(65, 65, 105, 40);
-		delBtn.setFont(new Font("맑은고딕", Font.BOLD, 20));
+		delBtn.setFont(new Font("留묒�怨좊뵓", Font.BOLD, 20));
 		delBtn.setForeground(new Color(128, 128, 128));
 		
-		//삭제 기능
+		//�궘�젣 湲곕뒫
 		String cont1 = " " + cont;
 		delBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -93,10 +93,10 @@ public class Delete extends JFrame {
 			}
 		});
 
-		//취소
-		JButton cancelBtn = new JButton("취소");
+		//痍⑥냼
+		JButton cancelBtn = new JButton("痍⑥냼");
 		cancelBtn.setBounds(240, 65, 105, 40);
-		cancelBtn.setFont(new Font("맑은고딕", Font.BOLD, 20));
+		cancelBtn.setFont(new Font("留묒�怨좊뵓", Font.BOLD, 20));
 		cancelBtn.setForeground(new Color(128, 128, 128));
 		
 		cancelBtn.addActionListener(new ActionListener() {

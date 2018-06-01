@@ -1,42 +1,254 @@
-package todoex;
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JFrame;
- 
-public class SubjectEnroll
-{
-	// ÇÊ¿äÇÑ ÇÊµå ¼±¾ğ
-	//ÀÛ¾÷ ÁøÇàÁß
-	JFrame jFrame = new JFrame("°ú¸ñ µî·Ï È­¸é");
-	JDialog jDialog = new JDialog(jFrame, "JDialog Å¸ÀÌÆ²");
-	JButton jButton = new JButton("Click");
+package cosign;
 
-	// GUI ±¸Çö »ı¼ºÀÚ
-	public SubjectEnroll()
-	{
-		// ´ÙÀÌ¾ó·Î±×¿¡ ¹öÆ° Ãß°¡
-		jDialog.add(jButton, "South");
+import cosign.*;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.event.*;
+import javax.swing.border.*;
+import java.io.*;
 
-		// ±âº» ÇÁ·¹ÀÓ Å©±â¿Í º¸±â ¼³Á¤
-		jFrame.setSize(500, 800);
-		jFrame.setVisible(true);
-		//X¹öÆ° ´©¸£¸é ÇÁ·Î±×·¥ Á¾·á
-		jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		// ´ÙÀÌ¾ó·Î±×ÀÇ Å©±â¿Í º¸±â ¼³Á¤
-		jDialog.setSize(100, 100);
-		jDialog.setVisible(true);
-		//¡ÚX¹öÆ° ´©¸£¸é ´ÙÀÌ¾ó·Î±×¸¸ Á¾·á
-		jDialog.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+public class SubjectEnroll extends JFrame{
 
+	private JPanel contentPane;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+	private JTextField textField_3;
+	private JTextField textField_4;
+	private JTextArea textArea;
+
+	//Launch the application.
+	public static void main(String[] args) {
+		SubjectEnroll frame = new SubjectEnroll();
+		frame.setVisible(true);
 	}
 	
-	
+	 //Create the frame.
+	 public SubjectEnroll() {
+		 
+		 setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+		 this.addWindowListener(new WindowAdapter(){
+             public void windowClosing(WindowEvent e) { 
+            	 try {
+						Mainframe ma = new Mainframe();
+						ma.setVisible(true);
+						dispose();
+					} catch (IOException e2) {
+						// TODO Auto-generated catch block
+						e2.printStackTrace();
+					}
+             }
+		 });
 
-	public static void main(String[] args)
-	{
-		//½ÇÇà
-		new SubjectEnroll();
+		 
+		////////////////////////////////////ê³¼ëª©ì¶”ê°€ì°½ ì „ì²´ í”„ë ˆì„
+		setBackground(Color.WHITE);
+		setBounds(0, 0, 500, 800);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 255, 255));
+		contentPane.setLayout(null);
+		setContentPane(contentPane);
+		
+		JLabel lblNewLabel1 = new JLabel("\uACFC\uBAA9 List");
+		lblNewLabel1.setIcon(new ImageIcon("Resource/UI3_Banner_Subject_Add.png"));
+		lblNewLabel1.setFont(new Font("ï§ë¬’ï¿½ æ€¨ì¢Šëµ“", Font.BOLD, 25));
+		//lblNewLabel.setForeground(new Color(128, 128, 128));
+		lblNewLabel1.setBounds(0, 0, 500, 55);
+		contentPane.add(lblNewLabel1);
+		
+		
+		JLabel lblNewLabel2 = new JLabel("\uACFC\uBAA9 List");
+		lblNewLabel2.setIcon(new ImageIcon("Resource/UI3_Background.png"));
+		lblNewLabel2.setFont(new Font("ï§ë¬’ï¿½ æ€¨ì¢Šëµ“", Font.BOLD, 25));
+		//lblNewLabel.setForeground(new Color(128, 128, 128));
+		lblNewLabel2.setBounds(0, 0, 500, 800);
+		contentPane.add(lblNewLabel2);
+		
+		
+		//ê³¼ëª©ëª… ë ˆì´ë¸”
+		JLabel label = new JLabel("ê³¼ëª©");
+		label.setForeground(new Color(93, 137, 204));
+		label.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 23));
+		label.setBounds(75, 215, 112, 32);
+		contentPane.add(label);
+		
+		//ê³¼ëª©ëª… í…ìŠ¤íŠ¸ ìƒì
+		textField = new JTextField();
+		textField.setBackground(new Color(255, 255, 255));
+		textField.setFont(new Font("HYì¤‘ê³ ë”•", Font.PLAIN, 15));
+		textField.setBounds(170, 235, 240, 45);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		
+		//ë‹´ë‹¹êµìˆ˜ ë ˆì´ë¸”
+		JLabel lblNewLabel = new JLabel("êµìˆ˜");
+		lblNewLabel.setForeground(new Color(93, 137, 204));
+		lblNewLabel.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 23));
+		lblNewLabel.setBounds(75, 290, 112, 32);
+		contentPane.add(lblNewLabel);
+		
+		//ë‹´ë‹¹êµìˆ˜ í…ìŠ¤íŠ¸ ìƒì
+		textField_1 = new JTextField();
+		textField_1.setFont(new Font("HYì¤‘ê³ ë”•", Font.PLAIN, 15));
+		textField_1.setColumns(10);
+		textField_1.setBounds(170, 310, 240, 45);
+		contentPane.add(textField_1);
+		
+		//ìš”ì¼/ì‹œê°„ ë ˆì´ë¸”
+		JLabel lblNewLabel_1 = new JLabel("\uC694\uC77C/\uC2DC\uAC04");
+		lblNewLabel_1.setForeground(new Color(128, 128, 128));
+		lblNewLabel_1.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 23));
+		lblNewLabel_1.setBounds(75, 225, 112, 32);
+		contentPane.add(lblNewLabel_1);
+		
+		//ìš”ì¼/ì‹œê°„ í…ìŠ¤íŠ¸ ìƒì
+		textField_2 = new JTextField();
+		textField_2.setFont(new Font("HYì¤‘ê³ ë”•", Font.PLAIN, 15));
+		textField_2.setColumns(10);
+		textField_2.setBounds(170, 385, 240, 45);
+		contentPane.add(textField_2);
+		
+		
+		//ë…„ë„/í•™ê¸° ë ˆì´ë¸”
+		JLabel label_1 = new JLabel("\uB144\uB3C4/\uD559\uAE30");
+		label_1.setForeground(new Color(128, 128, 128));
+		label_1.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 23));
+		label_1.setBounds(40, 320, 112, 32);
+		contentPane.add(label_1);
+		
+		//ë…„ë„/í•™ê¸° í…ìŠ¤íŠ¸ ìƒì
+		textField_3 = new JTextField();
+		textField_3.setFont(new Font("HYì¤‘ê³ ë”•", Font.PLAIN, 15));
+		textField_3.setColumns(10);
+		textField_3.setBounds(179, 460, 100, 45);
+		contentPane.add(textField_3);
+		
+		JLabel label_2 = new JLabel("\uB144\uB3C4/\uD559\uAE30");
+		label_2.setForeground(new Color(128, 128, 128));
+		label_2.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 23));
+		label_2.setBounds(40, 320, 112, 32);
+		contentPane.add(label_1);
+		
+		//ë…„ë„/í•™ê¸° í…ìŠ¤íŠ¸ ìƒì
+		textField_4 = new JTextField();
+		textField_4.setFont(new Font("HYì¤‘ê³ ë”•", Font.PLAIN, 15));
+		textField_4.setColumns(10);
+		textField_4.setBounds(320, 460, 100, 45);
+		contentPane.add(textField_4);
+		
+		
+		
+		/*
+		//ì„¸ë¶€ì‚¬í•­ ë ˆì´ë¸”
+		JLabel label_2 = new JLabel("\uC138\uBD80 \uC0AC\uD56D");
+		label_2.setForeground(new Color(128, 128, 128));
+		label_2.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 23));
+		label_2.setBounds(40, 415, 112, 32);
+		contentPane.add(label_2);
+		
+		//ì„¸ë¶€ì‚¬í•­ í…ìŠ¤íŠ¸ ìƒì
+		textField_4 = new JTextField();
+		textField_4.setFont(new Font("HYì¤‘ê³ ë”•", Font.PLAIN, 15));
+		textField_4.setColumns(10);
+		textField_4.setBounds(219, 411, 155, 46);
+		contentPane.add(textField_4);
+		*/
+		
+
+		//ì €ì¥ ë²„íŠ¼
+		JButton btnNewButton = new JButton();
+		btnNewButton.setForeground(new Color(0, 0, 0));
+		btnNewButton.setBackground(new Color(255, 255, 255));
+		btnNewButton.setIcon(new ImageIcon("resource/UI3_Button_Save.png"));
+		btnNewButton.setBounds(66, 650, 135, 70);
+		contentPane.add(btnNewButton);
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int count = 0;
+				try {
+					File data = new File("data.dt");
+					FileWriter fw = new FileWriter(data, true);
+					if(!(textField.getText().equals(""))){
+						fw.write(" <html>");
+						count++;
+						fw.write(textField.getText());
+					}
+					if(!(textField_1.getText().equals(""))){
+						fw.write("<br>");
+						count++;
+						fw.write(textField_1.getText());
+					}
+					if(!(textField_2.getText().equals(""))){
+						fw.write("::");
+						count++;
+						fw.write(textField_2.getText());
+					}
+					if(!(textField_3.getText().equals(""))){
+						count++;
+						fw.write(textField_3.getText());
+						fw.write("ë…„");
+						fw.write(textField_4.getText());
+						fw.write("í•™ê¸°");
+						fw.write("</html>");
+						fw.write("\n");
+						fw.flush();
+					}
+					
+					else if(count==4){
+						fw.write("</html>");
+						fw.write("\n");
+						fw.flush();
+					}
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				if(count!=4){
+					Notify warn = new Notify();
+					warn.setVisible(true);
+					count = 0;					
+				}
+				else{
+					try {
+						Mainframe ma = new Mainframe();
+						ma.setVisible(true);
+						dispose();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					
+				}
+			}
+		});
+		
+		JButton btnNewButton2 = new JButton();
+		btnNewButton2.setForeground(new Color(0, 0, 0));
+		btnNewButton2.setBackground(new Color(255, 255, 255));
+		btnNewButton2.setIcon(new ImageIcon("resource/UI3_Button_Cancel.png"));
+		btnNewButton2.setBounds(300, 650, 135, 70);
+		contentPane.add(btnNewButton2);
+		btnNewButton2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg1) {
+		{
+			try {
+				Mainframe ma = new Mainframe();
+				ma.setVisible(true);
+				dispose();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+		}
+			});
 	}
+			
+
+
 
 }

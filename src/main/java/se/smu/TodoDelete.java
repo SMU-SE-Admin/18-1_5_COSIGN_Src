@@ -48,7 +48,7 @@ public class TodoDelete extends JFrame {
 
 		JLabel L_todo = new JLabel("TODO\uBA85");
 		L_todo.setForeground(new Color(128, 128, 128));
-		L_todo.setFont(new Font("맑은 고딕", Font.BOLD, 21));
+		L_todo.setFont(new Font("留묒� 怨좊뵓", Font.BOLD, 21));
 		L_todo.setBounds(15, 10, 110, 30);
 
 		textField_1 = new JTextField();
@@ -57,10 +57,10 @@ public class TodoDelete extends JFrame {
 
 		JLabel label = new JLabel("\uACFC\uBAA9 \uC120\uD0DD");
 		label.setBounds(15, 60, 110, 30);
-		label.setFont(new Font("맑은 고딕", Font.BOLD, 21));
+		label.setFont(new Font("留묒� 怨좊뵓", Font.BOLD, 21));
 		label.setForeground(new Color(128, 128, 128));
 
-		//과목 선택
+		//怨쇰ぉ �꽑�깮
 		JComboBox comboBox = new JComboBox();
 		comboBox.setBounds(135, 60, 120, 30);
 
@@ -81,10 +81,10 @@ public class TodoDelete extends JFrame {
 		}
 		in.close();
 
-		//마감 기한
+		//留덇컧 湲고븳
 		JLabel label_1 = new JLabel("\uB9C8\uAC10 \uAE30\uD55C");
 		label_1.setBounds(15, 120, 110, 30);
-		label_1.setFont(new Font("맑은 고딕", Font.BOLD, 21));
+		label_1.setFont(new Font("留묒� 怨좊뵓", Font.BOLD, 21));
 		label_1.setForeground(new Color(128, 128, 128));
 
 		JComboBox comboBox_1 = new JComboBox();
@@ -95,7 +95,7 @@ public class TodoDelete extends JFrame {
 		
 		JLabel month = new JLabel("\uC6D4");
 		month.setBounds(195, 120, 30, 30);
-		month.setFont(new Font("맑은 고딕", Font.BOLD, 21));
+		month.setFont(new Font("留묒� 怨좊뵓", Font.BOLD, 21));
 		month.setForeground(new Color(128, 128, 128));
 
 		JComboBox comboBox_2 = new JComboBox();
@@ -107,7 +107,7 @@ public class TodoDelete extends JFrame {
 
 		JLabel day = new JLabel("\uC77C");
 		day.setBounds(285, 120, 30, 30);
-		day.setFont(new Font("맑은 고딕", Font.BOLD, 21));
+		day.setFont(new Font("留묒� 怨좊뵓", Font.BOLD, 21));
 		day.setForeground(new Color(128, 128, 128));
 
 		JComboBox comboBox_7 = new JComboBox();
@@ -118,13 +118,13 @@ public class TodoDelete extends JFrame {
 
 		JLabel hour = new JLabel("\uC2DC");
 		hour.setBounds(375, 120, 30, 30);
-		hour.setFont(new Font("맑은 고딕", Font.BOLD, 21));
+		hour.setFont(new Font("留묒� 怨좊뵓", Font.BOLD, 21));
 		hour.setForeground(new Color(128, 128, 128));
 
-		//실제 마감일
+		//�떎�젣 留덇컧�씪
 		JLabel label_2 = new JLabel("\uC2E4\uC81C\uB9C8\uAC10\uC77C");
 		label_2.setBounds(15, 190, 125, 30);
-		label_2.setFont(new Font("맑은 고딕", Font.BOLD, 21));
+		label_2.setFont(new Font("留묒� 怨좊뵓", Font.BOLD, 21));
 		label_2.setForeground(new Color(128, 128, 128));
 
 		JComboBox comboBox_3 = new JComboBox();
@@ -135,7 +135,7 @@ public class TodoDelete extends JFrame {
 
 		JLabel month1 = new JLabel("\uC6D4");
 		month1.setBounds(195, 190, 30, 30);
-		month1.setFont(new Font("맑은 고딕", Font.BOLD, 21));
+		month1.setFont(new Font("留묒� 怨좊뵓", Font.BOLD, 21));
 		month1.setForeground(new Color(128, 128, 128));
 
 		JComboBox comboBox_4 = new JComboBox();
@@ -146,7 +146,7 @@ public class TodoDelete extends JFrame {
 
 		JLabel day1 = new JLabel("\uC77C");
 		day1.setBounds(285, 190, 30, 30);
-		day1.setFont(new Font("맑은 고딕", Font.BOLD, 21));
+		day1.setFont(new Font("留묒� 怨좊뵓", Font.BOLD, 21));
 		day1.setForeground(new Color(128, 128, 128));
 
 		JComboBox comboBox_8 = new JComboBox();
@@ -157,13 +157,13 @@ public class TodoDelete extends JFrame {
 
 		JLabel hour1 = new JLabel("\uC2DC");
 		hour1.setBounds(375, 190, 30, 30);
-		hour1.setFont(new Font("맑은 고딕", Font.BOLD, 21));
+		hour1.setFont(new Font("留묒� 怨좊뵓", Font.BOLD, 21));
 		hour1.setForeground(new Color(128, 128, 128));
 
-		//알림
+		//�븣由�
 		JLabel label_3 = new JLabel("\uC54C\uB9BC \uAE30\uB2A5");
 		label_3.setForeground(new Color(128, 128, 128));
-		label_3.setFont(new Font("맑은 고딕", Font.BOLD, 21));
+		label_3.setFont(new Font("留묒� 怨좊뵓", Font.BOLD, 21));
 		label_3.setBounds(14, 260, 112, 32);
 		contentPane.add(label_3);
 
@@ -176,7 +176,7 @@ public class TodoDelete extends JFrame {
 
 		JLabel month2 = new JLabel("\uC6D4");
 		month2.setForeground(new Color(128, 128, 128));
-		month2.setFont(new Font("맑은 고딕", Font.BOLD, 21));
+		month2.setFont(new Font("留묒� 怨좊뵓", Font.BOLD, 21));
 		month2.setBounds(195, 260, 30, 30);
 		contentPane.add(month2);
 
@@ -189,7 +189,7 @@ public class TodoDelete extends JFrame {
 
 		JLabel day2 = new JLabel("\uC77C");
 		day2.setForeground(new Color(128, 128, 128));
-		day2.setFont(new Font("맑은 고딕", Font.BOLD, 21));
+		day2.setFont(new Font("留묒� 怨좊뵓", Font.BOLD, 21));
 		day2.setBounds(284, 260, 30, 30);
 		contentPane.add(day2);
 
@@ -202,14 +202,14 @@ public class TodoDelete extends JFrame {
 
 		JLabel hour2 = new JLabel("\uC2DC");
 		hour2.setForeground(new Color(128, 128, 128));
-		hour2.setFont(new Font("맑은 고딕", Font.BOLD, 21));
+		hour2.setFont(new Font("留묒� 怨좊뵓", Font.BOLD, 21));
 		hour2.setBounds(373, 260, 30, 30);
 		contentPane.add(hour2);
 
-		//세부 내용
+		//�꽭遺� �궡�슜
 		JLabel label_4 = new JLabel("\uC138\uBD80 \uC0AC\uD56D");
 		label_4.setForeground(new Color(128, 128, 128));
-		label_4.setFont(new Font("맑은 고딕", Font.BOLD, 21));
+		label_4.setFont(new Font("留묒� 怨좊뵓", Font.BOLD, 21));
 		label_4.setBounds(14, 333, 112, 32);
 		contentPane.add(label_4);
 
@@ -218,10 +218,10 @@ public class TodoDelete extends JFrame {
 		contentPane.add(textField);
 		textField.setColumns(10);
 
-		//완료여부
+		//�셿猷뚯뿬遺�
 		JLabel label_5 = new JLabel("\uC644\uB8CC \uC5EC\uBD80");
 		label_5.setForeground(new Color(128, 128, 128));
-		label_5.setFont(new Font("맑은 고딕", Font.BOLD, 21));
+		label_5.setFont(new Font("留묒� 怨좊뵓", Font.BOLD, 21));
 		label_5.setBounds(14, 406, 112, 32);
 		contentPane.add(label_5);
 
@@ -230,10 +230,10 @@ public class TodoDelete extends JFrame {
 		chckbxNewCheckBox.setBounds(133, 406, 25, 27);
 		contentPane.add(chckbxNewCheckBox);
 
-		//중요도
+		//以묒슂�룄
 		JLabel label_6 = new JLabel("\uC911\uC694 \uC5EC\uBD80");
 		label_6.setForeground(Color.GRAY);
-		label_6.setFont(new Font("맑은 고딕", Font.BOLD, 21));
+		label_6.setFont(new Font("留묒� 怨좊뵓", Font.BOLD, 21));
 		label_6.setBounds(186, 406, 96, 32);
 		contentPane.add(label_6);
 
@@ -246,12 +246,12 @@ public class TodoDelete extends JFrame {
 
 		JComboBox comboBox_10 = new JComboBox();
 		comboBox_10.setBounds(295, 409, 80, 32);
-		comboBox_10.addItem("보통");
-		comboBox_10.addItem("중요");
-		comboBox_10.addItem("매우 중요");
+		comboBox_10.addItem("蹂댄넻");
+		comboBox_10.addItem("以묒슂");
+		comboBox_10.addItem("留ㅼ슦 以묒슂");
 		contentPane.add(comboBox_10);
 
-		button.addActionListener(new ActionListener() {// 버튼 클릭시 수행 동작
+		button.addActionListener(new ActionListener() {// 踰꾪듉 �겢由��떆 �닔�뻾 �룞�옉
 			public void actionPerformed(ActionEvent e) {
 				String[] map2 = new String[1000];
 				String[] map3 = new String[1000];
@@ -281,14 +281,14 @@ public class TodoDelete extends JFrame {
 					
 						map3[i] = map3[i].replaceAll(" ", "");
 						
-						tempindex = map3[i].toString().indexOf("알림시간");
+						tempindex = map3[i].toString().indexOf("�븣由쇱떆媛�");
 						if(tempindex!=-1){
 							for(int tt = tempindex+5; !(map3[i].charAt(tt)==':'&&map3[i].charAt(tt+1)==':');tt++){
 								temp = temp+map3[i].charAt(tt);
 							}
-							temp = temp.replaceAll("월", "\t");
-							temp = temp.replaceAll("일", "\t");
-							temp = temp.replaceAll("시", "\t");
+							temp = temp.replaceAll("�썡", "\t");
+							temp = temp.replaceAll("�씪", "\t");
+							temp = temp.replaceAll("�떆", "\t");
 							time[timeindex] = temp;
 							timeindex++;
 							temp="";
@@ -298,14 +298,14 @@ public class TodoDelete extends JFrame {
 					
 					bw.close();
 					
-					conttdtempindex = conttd.toString().indexOf("알림시간");
+					conttdtempindex = conttd.toString().indexOf("�븣由쇱떆媛�");
 					if(conttdtempindex!=-1){
 						for(int tt = conttdtempindex+5; !(conttd.charAt(tt)==':'&&conttd.charAt(tt+1)==':');tt++){
 							conttdtemp = conttdtemp+conttd.charAt(tt);
 						}
-						conttdtemp = conttdtemp.replaceAll("월", "\t");
-						conttdtemp = conttdtemp.replaceAll("일", "\t");
-						conttdtemp = conttdtemp.replaceAll("시", "\t");
+						conttdtemp = conttdtemp.replaceAll("�썡", "\t");
+						conttdtemp = conttdtemp.replaceAll("�씪", "\t");
+						conttdtemp = conttdtemp.replaceAll("�떆", "\t");
 					}
 				
 					for(int j=0;j<timeindex;j++){
@@ -366,59 +366,59 @@ public class TodoDelete extends JFrame {
 						fw2.write(comboBox.getSelectedItem().toString());
 					}
 					if (count == 1) {
-						fw2.write("<br>마감기한 : ");
+						fw2.write("<br>留덇컧湲고븳 : ");
 						fw2.write(comboBox_1.getSelectedItem().toString());
 					}
 					if (count == 1) {
-						fw2.write("월 ");
+						fw2.write("�썡 ");
 						fw2.write(comboBox_2.getSelectedItem().toString());
 					}
 					if (count == 1) {
-						fw2.write("일 ");
+						fw2.write("�씪 ");
 						fw2.write(comboBox_7.getSelectedItem().toString());
-						fw2.write("시::");
+						fw2.write("�떆::");
 					}
 					if (count == 1) {
-						fw2.write("실제 마감일 : ");
+						fw2.write("�떎�젣 留덇컧�씪 : ");
 						fw2.write(comboBox_3.getSelectedItem().toString());
 					}
 					if (count == 1) {
-						fw2.write("월 ");
+						fw2.write("�썡 ");
 						fw2.write(comboBox_4.getSelectedItem().toString());
 					}
 					if (count == 1) {
-						fw2.write("일 ");
+						fw2.write("�씪 ");
 						fw2.write(comboBox_8.getSelectedItem().toString());
-						fw2.write("시<br>");
+						fw2.write("�떆<br>");
 					}
 					if (comboBox_5.getSelectedItem().toString().equals("0")&&comboBox_6.getSelectedItem().toString().equals("0")) {
-						fw2.write("알림 꺼짐::");
+						fw2.write("�븣由� 爰쇱쭚::");
 					} else {
 						if (count == 1) {
-							fw2.write("알림 시간 : ");
+							fw2.write("�븣由� �떆媛� : ");
 							fw2.write(comboBox_5.getSelectedItem().toString());
 							fw1.write(comboBox_5.getSelectedItem().toString()+"\t");
 						}
 						if (count == 1) {
-							fw2.write("월 ");
+							fw2.write("�썡 ");
 							fw2.write(comboBox_6.getSelectedItem().toString());
 							fw1.write(comboBox_6.getSelectedItem().toString()+"\t");
 						}
 						if (count == 1) {
-							fw2.write("일 ");
+							fw2.write("�씪 ");
 							fw2.write(comboBox_9.getSelectedItem().toString());
 							fw1.write(comboBox_9.getSelectedItem().toString()+"\n");
-							fw2.write("시::");
+							fw2.write("�떆::");
 						}
 					}
 					if ((chckbxNewCheckBox.isSelected()) && count == 1) {
-						fw2.write("완료::");
+						fw2.write("�셿猷�::");
 						fw2.write(comboBox_10.getSelectedItem().toString());
 						fw2.write(":::");
 						fw2.write(textField.getText());
 
 					} else {
-						fw2.write("진행중::");
+						fw2.write("吏꾪뻾以�::");
 						fw2.write(comboBox_10.getSelectedItem().toString());
 						fw2.write(":::");
 						fw2.write(textField.getText());
@@ -434,14 +434,14 @@ public class TodoDelete extends JFrame {
 					e1.printStackTrace();
 				}
 				if (count != 1) {
-					Warning warn = new Warning();
+					Notify warn = new Notify();
 					warn.setVisible(true);
 					count = 0;
 				} else {
 					try {
 						Mainframe ma = new Mainframe();
 						ma.setVisible(true);
-						dispose();// 창닫기
+						dispose();// 李쎈떕湲�
 					} catch (IOException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();

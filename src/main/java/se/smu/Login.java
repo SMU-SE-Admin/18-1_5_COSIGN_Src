@@ -1,71 +1,89 @@
-package todoex;
-import javax.swing.*;
-import java.awt.*;
-import javax.swing.border.*;
- 
-  
-public class Login extends JFrame
-{
-    JLabel lbl,la1,la2,la3;
-    JTextField id;
-    JPasswordField passwd;
-    JPanel idPanel,paPanel,loginPanel;
-    JButton b1,b2;
-    JTextArea content;
- 
-    public Login()
-    {
-          super( "Cosign TodoList Login" );
-          
-          // FlowLayoutªÁøÎ          
-          setLayout( new FlowLayout() );
-          
-          // Border∑Œ øµø™ ª˝º∫          
-          EtchedBorder eborder =  new EtchedBorder();
-          
-          // ∑π¿Ã∫Ì ª˝º∫     
-          lbl = new JLabel( "Todolist ªÁøÎ¿ª ¿ß«ÿ æ∆¿ÃµøÕ ∆–Ω∫øˆµÂ∏¶ ¿‘∑¬«ÿ ¡÷ººø‰" );
-          
-          // ∑π¿Ã∫Ìø° øµø™ ∏∏µÈ±‚
-          lbl.setBorder(eborder);
-          
-          // ∑π¿Ã∫Ì √ﬂ∞°
-          add( lbl );
-          
-          // id∆–≥Œ∞˙ pw ∆–≥Œª˝º∫
-          idPanel = new JPanel();
-          paPanel = new JPanel();
-          la3 = new JLabel("æ∆¿Ãµ");
-          la2 = new JLabel("∆–Ω∫øˆµÂ");
-          
-          // id≈ÿΩ∫∆Æ« µÂøÕ pw≈ÿΩ∫∆Æ « µÂ º±æ
-          id = new JTextField(10);
-          passwd = new JPasswordField(10);
-          idPanel.add(la3);
-          idPanel.add(id);
-          paPanel.add( la2 );
-          paPanel.add( passwd );
-          
-          // ∑Œ±◊¿Œ∞˙ »∏ø¯∞°¿‘¿ª ¿ß«— ∆–≥Œ ª˝º∫
-          loginPanel = new JPanel();
-          b1 = new JButton("∑Œ±◊¿Œ");
-          b2 = new JButton("»∏ø¯∞°¿‘");
-          loginPanel.add( b1 );
-          loginPanel.add( b2 );
-          add(idPanel);
-          add(paPanel);
-          add(loginPanel);
-          
-          
-          setSize( 500, 800 );
-          setVisible(true);
-          setDefaultCloseOperation(EXIT_ON_CLOSE);
-    }
-    
-    public static void main( String args[] )
-       { 
-        new Login();
-       }
- 
-    
+package cosign;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.io.IOException;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class Login extends JFrame{
+
+	private JPanel contentPane;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+	private JTextField textField_3;
+	private JTextField textField_4;
+	private JTextArea textArea;
+
+	//Launch the application.
+	public static void main(String[] args) {
+		Login frame = new Login();
+		frame.setVisible(true);
+	}
+	
+	 //Create the frame.
+	 public Login() {
+		 setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+		 this.addWindowListener(new WindowAdapter(){
+             public void windowClosing(WindowEvent e) { 
+            	 try {
+						Mainframe ma = new Mainframe();
+						ma.setVisible(true);
+						dispose();
+					} catch (IOException e2) {
+						// TODO Auto-generated catch block
+						e2.printStackTrace();
+					}
+             }
+		 });
+		 
+		setBackground(Color.WHITE);
+		setBounds(0, 0, 500, 800);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(250, 184, 88));
+		contentPane.setLayout(null);
+		setContentPane(contentPane);
+
+
+		JLabel lblNewLabel1 = new JLabel("\uACFC\uBAA9 List");
+		lblNewLabel1.setIcon(new ImageIcon("Resource/UI1_Background.png"));
+		//lblNewLabel1.setFont(new Font("ÔßçÎ¨íÔøΩ ÊÄ®Ï¢äÎµì", Font.BOLD, 25));
+		//lblNewLabel.setForeground(new Color(128, 128, 128));
+		lblNewLabel1.setBounds(0, -80, 500, 800);
+		contentPane.add(lblNewLabel1);
+		
+		JButton btnNewButton2 = new JButton();
+		btnNewButton2.setBackground(new Color(250,184,88));
+		btnNewButton2.setIcon(new ImageIcon("resource/UI1_Login.png"));
+		btnNewButton2.setBounds(184, 650, 135, 70);
+		contentPane.add(btnNewButton2);
+		btnNewButton2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg1) {
+		{
+			try {
+				Mainframe ma = new Mainframe();
+				ma.setVisible(true);
+				dispose();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+		}
+			});
+		
+	 }
+	 
 }
